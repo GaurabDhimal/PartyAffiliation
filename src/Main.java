@@ -6,24 +6,29 @@ public class Main
     {
         Scanner in = new Scanner(System.in);
 
-        String partyAfill = "";
+        String menuChoice = "";
+        String menu = "R - Republican\tD - Democrat\tI - Independent\tO - Other\nChoose your party affiliation: ";
 
 
-        if(partyAfill.equalsIgnoreCase("R"))
+        System.out.print(menu);
+        menuChoice = in.nextLine();
+
+
+        if(menuChoice.equalsIgnoreCase("R"))
         {
             System.out.println("You get a Republican Elephant!");
         }
-        else if(partyAfill.equalsIgnoreCase("D"))
+        else if(menuChoice.equalsIgnoreCase("D"))
         {
             System.out.println("You get a Democratic Donkey!");
         }
-        else if(partyAfill.equalsIgnoreCase("I"))
+        else if(menuChoice.equalsIgnoreCase("I"))
         {
             System.out.println("You get an Independent Man!");
         }
         else
-            System.out.println("I don't know what party you belong to!");
-            System.out.println("Run the program again!");
-
+        {
+            System.out.println("You chose other");
+        }
     }
 }
